@@ -10,7 +10,7 @@ import {
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Przykładowe dane slajdów (możesz je dostosować)
+ 
   const slides = [
     {
       image: "/bialko.jpg",
@@ -33,7 +33,7 @@ const Slider = () => {
     },
   ];
 
-  // Funkcje do zmiany slajdów
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
   };
@@ -42,12 +42,12 @@ const Slider = () => {
     setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
   };
 
-  // Automatyczne przewijanie (opcjonalne)
+ 
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 5000); // Zmiana co 5 sekund
-    return () => clearInterval(interval); // Czyszczenie interwału przy odmontowaniu
+    }, 5000); // 
+    return () => clearInterval(interval); 
   }, []);
 
   return (
@@ -71,7 +71,7 @@ const Slider = () => {
         ))}
       </div>
 
-      {/* Strzałki nawigacyjne */}
+    
       <button className={styles.prevButton} onClick={prevSlide}>
         <FontAwesomeIcon icon={faChevronLeft} />
       </button>
@@ -79,7 +79,7 @@ const Slider = () => {
         <FontAwesomeIcon icon={faChevronRight} />
       </button>
 
-      {/* Kropki (dots) */}
+   
       <div className={styles.dots}>
         {slides.map((_, index) => (
           <span
