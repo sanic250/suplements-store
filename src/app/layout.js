@@ -5,14 +5,13 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
-import Header from "./components/header";
 config.autoAddCss = false;
 const inter = Inter({
   subsets: ["latin"],
 });
 
 const poppins = Poppins({
-  weight: ["400", "700"],
+  weight: ["400","500", "600", "700"],
   subsets: ["latin"],
 });
 
@@ -26,7 +25,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`{inter.className} {poppins.className}`}>
         <Navbar />
-        <Header />
         {children}
         <Footer />
       </body>

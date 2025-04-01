@@ -1,0 +1,11 @@
+.itemBoxContainer{
+  display: flex;
+  flex-direction: column;
+  gap:12px;
+  text-align: center;
+  justify-content: center;
+  width: 200px;
+  
+}
+
+

@@ -5,6 +5,16 @@
   max-width: 1400px;
   margin: 0 auto;
   align-items: center;
+  
+}
+
+.bgtop{
+  background: linear-gradient(0deg, #8a1818 0%, #e2d9d9 60%);
+}
+
+.mainTitle{
+  font-size: 50px;
+  text-shadow: -3px 3px 10px black;
 }
 
 .icons{
@@ -21,7 +31,7 @@
 }
 
 .icon:hover{
-  background-color: rgba(128, 128, 128, 0.424);
+  background-color: #8a1818;
 }
 
 .logo{
@@ -39,7 +49,7 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  background-color: rgb(47, 28, 12);
+  background-color: rgb(149, 22, 22);
 }
 
 .links{
@@ -53,7 +63,126 @@
 .link{
   text-decoration: none;
   color: rgb(184, 149, 149);
-  
+  cursor: pointer;
+  font-weight: 600;
   
 }
 
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Menu ukryte poza ekranem */
+    height: 100vh;
+    width: 250px;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+  }
+
+  .navOpen {
+    right: 0; /* Menu widoczne */
+  }
+
+  .links {
+    flex-direction: column;
+    padding-top: 4rem;
+  }
+
+  .link {
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .icons {
+    gap: 0.5rem;
+  }
+
+  .iconText {
+    font-size: 0.8rem;
+  }
+  .menuItem {
+    position: relative;
+  }
+  
+ 
+  
+  .submenuOpen {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+
+}
+.submenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 250px;
+  background: rgb(148, 138, 138);
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  z-index: 1000;
+  border-radius: 5px;
+}
+
+.submenuOpen {
+  display: block;
+}
+
+.submenu li {
+  padding: 5px 5px;
+  list-style: none;
+}
+
+.submenu li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  font-weight: bold;
+  transition: background 0.2s ease-in-out;
+  text-decoration: underline;
+}
+
+.submenu li a:hover {
+  background: rgb(230, 230, 230);
+}
+
+/* Dostosowanie pozycji menu względem rodzica */
+.links li {
+  position: relative;
+}
+
+
+
+@media (max-width: 768px) {
+  .submenu {
+    position: relative;
+    width: 100%;
+    box-shadow: none;
+    background: none;
+    padding: 0;
+  }
+
+  .submenu li {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .submenu li a {
+    color: black;
+    font-size: 1rem;
+  }
+
+  .submenuOpen {
+    display: block;
+  }
+}
