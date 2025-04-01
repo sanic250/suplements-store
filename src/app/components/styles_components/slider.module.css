@@ -1,4 +1,4 @@
-/* styles_components/slider.module.css */
+
 .slider {
   position: relative;
   width: 100%;
@@ -53,7 +53,7 @@
   font-size: 1.2rem;
 }
 
-/* Strzałki */
+
 .prevButton,
 .nextButton {
   position: absolute;
