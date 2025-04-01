@@ -32,7 +32,7 @@ function Navbar() {
 
       <nav className={styles.nav}>
         <ul className={styles.links}>
-          {/* Kategorie */}
+        
           <li 
             className={styles.menuItem} 
             onMouseEnter={() => setIsCategoryOpen(true)}
@@ -47,7 +47,7 @@ function Navbar() {
             </ul>
           </li>
 
-          {/* Producenci */}
+         
           <li 
             className={styles.menuItem} 
             onMouseEnter={() => setIsProducersOpen(true)}
